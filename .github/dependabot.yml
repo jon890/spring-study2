@@ -26,9 +26,9 @@ updates:
         patterns:
           - "gradle"
         update-types:
-          - "version-update:semver-major"
-          - "version-update:semver-minor"
-          - "version-update:semver-patch"
+          - "major"
+          - "minor"
+          - "patch"
 
   # GitHub Actions dependencies
   - package-ecosystem: "github-actions"
