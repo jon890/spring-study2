@@ -1,0 +1,31 @@
+[versions]
+# Spring
+spring-boot = "4.0.0"
+spring-dependency-management = "1.1.7"
+
+# Java
+java = "25"
+
+[libraries]
+# Spring Boot Starters
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring-boot" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "spring-boot" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+
+[bundles]
+spring-web = [
+    "spring-boot-starter-web",
+    "spring-boot-starter-validation"
+]
+
+spring-data = [
+    "spring-boot-starter",
+    "spring-boot-starter-data-jpa"
+]
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+
